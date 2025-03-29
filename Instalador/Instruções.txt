@@ -1,0 +1,60 @@
+============================================
+IMPORTADOR DE LANÇAMENTOS CONTÁBEIS
+============================================
+
+Data de geração: 27/03/2025 05:42:10
+
+--------------------------------------------
+⚠️ AVISOS IMPORTANTES
+--------------------------------------------
+
+- O sistema **Contábil** (Contabil.exe) **NÃO pode estar aberto** durante o uso do Importador.
+  Certifique-se de que ele esteja totalmente fechado antes de continuar.
+
+- **Antes de cada importação**, o sistema realiza automaticamente um **backup** completo dos dados
+  da empresa, gerando um arquivo com extensão `.bkp` dentro da pasta da empresa.
+
+- Esse backup pode ser restaurado a qualquer momento utilizando a ferramenta de
+  **Cópia de Segurança** do próprio sistema Contábil.
+
+--------------------------------------------
+✅ PASSOS PARA UTILIZAÇÃO DO SISTEMA
+--------------------------------------------
+
+1️⃣  Verificar caminho do sistema no arquivo `Config.ini`
+------------------------------------------------------------
+- O arquivo `Config.ini` encontra-se na **mesma pasta onde o importador foi instalado**.
+- Localize a seção `[Configuracoes]` e a chave `Caminho`, que define o caminho padrão
+  da base de dados do sistema Contábil.
+- Caso necessário, **ajuste apenas a letra da unidade**, mantendo a estrutura original.
+
+2️⃣  Carregar empresas
+------------------------------------------------------------
+- Clique no botão **"Carregar Empresa"** para que sejam listadas as empresas
+  configuradas no sistema Contábil.
+
+3️⃣  Escolher o arquivo de importação
+------------------------------------------------------------
+- Clique no botão **"Escolher Arquivo de Importação"**.
+- Nesta etapa, os dados do arquivo selecionado serão **carregados na tela** para conferência.
+- O sistema realizará uma **validação automática** e informará, se necessário,
+  **qual linha contém erro** no layout.
+
+4️⃣  Realizar a importação
+------------------------------------------------------------
+- Clique no botão **"Importar"** para iniciar o processo de gravação dos dados
+  nos bancos do sistema Contábil.
+- Após a mensagem de sucesso, acesse o sistema Contábil e vá em:
+
+      **Menu: Processamento > Atualizar Saldo**
+
+  para concluir a atualização dos dados lançados.
+
+--------------------------------------------
+Tudo pronto!
+--------------------------------------------
+Seu sistema está configurado e pronto para facilitar a importação dos lançamentos contábeis
+de forma rápida e segura.
+
+Em caso de dúvidas, procure o suporte técnico responsável.
+

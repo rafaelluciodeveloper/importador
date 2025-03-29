@@ -1,0 +1,186 @@
+object Form1: TForm1
+  Left = 192
+  Top = 125
+  Width = 904
+  Height = 463
+  Caption = 'Importador Lan'#231'amentos Cont'#225'bil'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCloseQuery = FormCloseQuery
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 5
+    Top = 17
+    Width = 107
+    Height = 13
+    Caption = 'Caminha Cont'#225'bil :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 54
+    Top = 49
+    Width = 57
+    Height = 13
+    Caption = 'Empresa :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 3
+    Top = 81
+    Width = 113
+    Height = 13
+    Caption = 'Caminho Empresa : '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabelCaminhoEmpresa: TLabel
+    Left = 117
+    Top = 80
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object TabelaDados: TStringGrid
+    Left = 5
+    Top = 105
+    Width = 873
+    Height = 305
+    ColCount = 1
+    Enabled = False
+    FixedCols = 0
+    RowCount = 1
+    FixedRows = 0
+    TabOrder = 0
+  end
+  object EditCaminhoContabil: TEdit
+    Left = 115
+    Top = 15
+    Width = 277
+    Height = 21
+    ReadOnly = True
+    TabOrder = 1
+    Text = 'c:\padraowin\contabil\dados\'
+  end
+  object BtnEscolherArquivo: TBitBtn
+    Left = 529
+    Top = 10
+    Width = 185
+    Height = 25
+    Caption = 'Escolher Arquivo Importa'#231#227'o'
+    Enabled = False
+    TabOrder = 2
+    OnClick = BtnEscolherArquivoClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF0033333333B333
+      333B33FF33337F3333F73BB3777BB7777BB3377FFFF77FFFF77333B000000000
+      0B3333777777777777333330FFFFFFFF07333337F33333337F333330FFFFFFFF
+      07333337F3FF3FFF7F333330F00F000F07333337F77377737F333330FFFFFFFF
+      07333FF7F3FFFF3F7FFFBBB0F0000F0F0BB37777F7777373777F3BB0FFFFFFFF
+      0BBB3777F3FF3FFF77773330F00F000003333337F773777773333330FFFF0FF0
+      33333337F3FF7F37F3333330F08F0F0B33333337F7737F77FF333330FFFF003B
+      B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
+      3BB33773333773333773B333333B3333333B7333333733333337}
+    NumGlyphs = 2
+  end
+  object BtnImportar: TBitBtn
+    Left = 720
+    Top = 10
+    Width = 161
+    Height = 25
+    Caption = 'Importar'
+    Enabled = False
+    TabOrder = 3
+    OnClick = BtnImportarClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      33333333333FFFFFFFFF333333000000000033333377777777773333330FFFFF
+      FFF03333337F333333373333330FFFFFFFF03333337F3FF3FFF73333330F00F0
+      00F03333F37F773777373330330FFFFFFFF03337FF7F3F3FF3F73339030F0800
+      F0F033377F7F737737373339900FFFFFFFF03FF7777F3FF3FFF70999990F00F0
+      00007777777F7737777709999990FFF0FF0377777777FF37F3730999999908F0
+      F033777777777337F73309999990FFF0033377777777FFF77333099999000000
+      3333777777777777333333399033333333333337773333333333333903333333
+      3333333773333333333333303333333333333337333333333333}
+    NumGlyphs = 2
+  end
+  object ProgressBar1: TProgressBar
+    Left = 528
+    Top = 48
+    Width = 352
+    Height = 17
+    TabOrder = 4
+  end
+  object ComboBoxEmpresas: TComboBox
+    Left = 116
+    Top = 46
+    Width = 405
+    Height = 21
+    Enabled = False
+    ItemHeight = 13
+    TabOrder = 5
+    OnChange = ComboBoxEmpresasChange
+  end
+  object BtnCarregarEmpresas: TBitBtn
+    Left = 402
+    Top = 10
+    Width = 121
+    Height = 25
+    Caption = 'Carregar Empresas'
+    TabOrder = 6
+    OnClick = BtnCarregarEmpresasClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+      003337777777777777F330FFFFFFFFFFF033373F3F3F3F3F3733330F0F0F0F0F
+      03333F7F737373737FFF0000FFFFFFF0000377773FFFFFF7777F0FF800000008
+      FF037F3F77777773FF7F0F9FFFFFFFF000037F7333333337777F0FFFFFFFFFFF
+      FF0373FFFFFFFFFFFF7330000000000000333777777777777733333000000000
+      3333333777777777F3333330FFFFFFF033333337F3FFFFF7F3333330F00000F0
+      33333337F77777F7F3333330F0AAE0F033333337F7F337F7F3333330F0DAD0F0
+      33333337F7FFF7F7F3333330F00000F033333337F7777737F3333330FFFFFFF0
+      33333337FFFFFFF7F33333300000000033333337777777773333}
+    NumGlyphs = 2
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 296
+    Top = 72
+  end
+  object JvZlibMultiple1: TJvZlibMultiple
+    Left = 336
+    Top = 72
+  end
+end
